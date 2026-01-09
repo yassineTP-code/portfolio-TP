@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/backg.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container{
+    padding: 2% 2%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: rgb(69, 148, 101);
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 5%;
+    font-size: 30px; 
+}
+
+
+.header-text h1{
+    font-size: 45px;
+    margin-top: 80px;
+
+}
+.titre{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.header-text p span{
+    color:  rgb(69, 148, 101) ;
+}
+
+/*---------a propos----------*/
+#about{
+    padding: 80px 2%;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100% ;
+    border-radius: 15px;   
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.intro{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titres{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.lien{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.lien::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #459465;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+.lien.actif::after{
+    width: 60%;
+}
+
+.tab-contenus ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contenus ul li span{
+    color: #459465;
+    font-size: 14px;
+}
+.tab-contenus{
+    display: none;
+}
+.tab-contenus.active{
+    display: block;
+}
+
+/*           competences           */
+#Skills{
+    padding: 30px 2%;
+}
+
+
+.tab-competences{
+    display: flex;
+    margin: 80px 30% 40px;
+}
+
+.but{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.but::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #459465;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+.but.activé::after{
+    width: 90%;
+}
+
+.tab-detail ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-detail ul li span{
+    color: #459465;
+    font-size: 14px;
+}
+.tab-detail{
+    display: none;
+    margin-left: 30%;
+}
+.tab-detail.activated{
+    display: block;
+}
+.Skills.container{
+    justify-self: center;
+}
+
+
+
+/* projets */
+#projets{
+    padding: 30px 2%;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap : 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: 0.3s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#459465);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color:#459465;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #459465;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background:#459465 ;
+}
+
+/* ---------- contact ---------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+     font-size: 30px;
+    margin-right: 15px;
+    color: #459465;
+}
+.socials{
+    margin-top: 30px;
+}
+.socials a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.socials a:hover{
+    color: #459465;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #459465;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px ;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px; 
+}
+
+
+/*----------------Pour compatibilite aux petits ecrans----- */
+@media only screen and (max-width: 600px){
+  #header{
+    background-image: url(images/backgpetit.png);
+    height: auto;
+    padding-bottom: 30px;
+    background-position: top center;
+  }
+
+  .container{
+    padding: 4% 4%;
+  }
+
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .logo{
+    width: 110px;
+  }
+
+  nav ul{
+    width: 100%;
+    padding: 0;
+    margin: 8px 0;
+    display: block;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 8px 0;
+  }
+
+  nav ul li a{
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  .header-text{
+    margin-top: 6%;
+    font-size: 20px;
+  }
+
+  .header-text h1{
+    font-size: 30px;
+    margin-top: 24px;
+    line-height: 1.15;
+  }
+
+  .titre{
+    font-size: 18px;
+  }
+
+  #about{
+    padding: 30px 4%;
+  }
+
+  .row{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-col-1,
+  .about-col-2,
+  .contact-left,
+  .contact-right{
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .about-col-1 img{
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .intro{
+    font-size: 36px;
+  }
+
+  .tab-titres{
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 20px;
+  }
+
+  .lien,
+  .but{
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  .tab-detail{
+    margin-left: 0;
+  }
+
+  #Skills{
+    padding: 20px 4%;
+  }
+
+  .tab-competences{
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+  }
+
+  
+  #projets{
+    padding: 20px 4%;
+  }
+
+  .work-list{
+    grid-template-columns: 1fr;
+    grid-gap: 18px;
+    margin-top: 30px;
+  }
+
+  .work img{
+    border-radius: 8px;
+  }
+
+  .layer{
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .layer a{
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+  }
+
+  .btn{
+    padding: 10px 28px;
+    margin: 30px auto;
+  }
+
+  .contact-left p{
+    font-size: 22px;
+    margin-right: 0;
+  }
+
+  .socials a{
+    font-size: 26px;
+    margin-right: 12px;
+  }
+
+  .contact-right form{
+    width: 100%;
+  }
+
+  form input, form textarea{
+    font-size: 16px;
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  form .btn2{
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+
+  .copyright{
+    padding: 18px 0;
+    font-size: 14px;
+  }
+
+  
+  img, iframe, embed, video{
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+  html, body{
+    font-size: 15px;
+  }
+}

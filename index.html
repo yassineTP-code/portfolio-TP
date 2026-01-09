@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine CHeikh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" alt="logo">
+            <ul>
+                <li><a href="#header">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#Skills">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Yassine <span>CHEIKH</span>,</p>
+            <p class="titre">Analyste de données junior | Spécialiste en Business Intelligence</P>
+            <h1>Transformer les données en informations <br>utiles pour soutenir des décisions métiers plus intelligentes.</h1> 
+            
+        </div>
+    </div>
+</div>
+
+<!-----------section à propos----->
+<div id="about">
+    <div class="countainer">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="photo personnel">
+            </div>
+            <div class="about-col-2">
+                <h1 class="intro">À propos de moi</h1>
+                <p>  <br>
+                     Passionné par l’analyse de données et la Business Intelligence,
+                     je suis un analyste de données junior spécialisé dans la transformation 
+                     des données brutes en indicateurs clairs et exploitables.
+                      <br>  
+                   J’utilise les données pour comprendre les performances,
+                      identifier des tendances et aider à la prise de décision. 
+                     Curieux, rigoureux et orienté résultats, je cherche constamment à 
+                    améliorer mes compétences et à apporter de la valeur à travers des analyses pertinentes.
+                </p>
+                <div class="tab-titres">
+                    <p class="lien actif" onclick="opentab('Compétences')">Compétences</p>
+                    <p class="lien" onclick="opentab('Formation')">Formation</p>
+                </div>
+                <div class="tab-contenus active" id="Compétences">
+                    <ul>
+                        <li><span>Analyse de données</span><br>nettoyage, exploration et interprétation des données</li>
+                        <li><span>Business Intelligence</span><br>conception de tableaux de bord et reporting décisionnel</li>
+                        <li><span>Statistiques</span><br>analyse descriptive, KPI et indicateurs de performance</li>
+                        <li><span>Power BI</span><br>modélisation des données, DAX, visualisations interactives</li>
+                        <li><span>SQL</span><br>requêtes, jointures, agrégations et analyse de bases de données</li>
+                    </ul>
+                </div>
+                <div class="tab-contenus" id="Formation">
+                    <ul>
+                        <li><span>2025 - Courant</span><br>Bachlor en intelligence artificielle et sciences de données</li>
+                        <li><span>2023 - 2025</span><br>DTS en Analyse de données</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------   competences------------------>
+ <div id="Skills">
+    <div class="container">
+        <h1 class="intro">Mes compétences</h1>
+
+        <div class="tab-competences">
+            <p class="but activé" onclick="ouvrir('techniques')">Compétences techniques</p>
+            <p class="but" onclick="ouvrir('Outils')">Outils & technologies</p>
+            <p class="but" onclick="ouvrir('BI')">Business Intelligence</p>           
+        </div>
+
+        <div class="tab-detail activated" id="techniques">
+            <ul>
+                <li>Analyse et exploration de données</li>
+                <li>Nettoyage et préparation des données</li>
+                <li>Création de tableaux de bord interactifs</li>
+                <li>Reporting et indicateurs de performance (KPI)</li>
+                <li>Modélisation des données</li>
+            </ul>
+        </div>
+        <div class="tab-detail" id="Outils">
+            <ul>
+                <li><span>Power BI</span><br>modèles de données, DAX, visualisations interactives</li>
+                <li><span>SQL : MySQL / SQL Server</span><br>requêtes, jointures, agrégations</li>
+                <li><span>Excel</span><br>fonctions avancées, tableaux croisés dynamiques</li>
+                <li><span>Python :</span><br>data wrangling, Machine learning ... </li>
+            </ul>
+        </div>
+        <div class="tab-detail" id="BI">
+            <ul>
+                <li>Analyse des besoins métiers</li>
+                <li>Transformation des données en informations exploitables</li>
+                <li>Aide à la prise de décision</li>
+                <li>Visualisation claire et orientée métier</li>
+                <li>Automatisation et optimisation des rapports</li>
+            </ul>
+        </div>
+
+    </div>
+ </div>
+<!--        -------------- projets  --------           -->
+ <div id="projets">
+    <div class="countainer">
+        <h1 class="intro">Mes projets</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/ex1.png" alt="">
+                <div class="layer">
+                    <h3>compagne marketing</h3>
+                    <p>tableau de board pour analyser une compagne maeketing</p>
+                    <a href="#">...</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ex2.png" alt="">
+                <div class="layer">
+                    <h3>Tendances Spotify</h3>
+                    <p>tableau de board visualiser les artistes et les tendances performnts sur spotify </p>
+                    <a href="#">...</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ex3.png" alt="">
+                <div class="layer">
+                    <h3>Performance Youtube</h3>
+                    <p>tableau de board pour suivre la performance des milles top youtubeurs performants sur youtube</p>
+                    <a href="#">...</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">Decouvrir Plus</a>
+    </div>
+ </div>
+
+ <!-----------------contact--------------->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="intro">Veuillez me contacter</h1>
+                <p>E-mail: myemail@contactme.com</p>
+                <p>Phone: 0670089001</p>
+                <p>socials:</p>
+                <div class="socials">
+                    <a href="github.com">github</a>
+                    <a href="twitter.com">twitter</a>
+                    <a href="facebook.com">facebook</a>
+                </div>
+                <a href="images/mon-cv.pdf" download class="btn btn2">Telecharger Mon CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Nom" placeholder="Nom Complet" required>
+                    <input type="email" name="email" placeholder="e-mail" required>
+                    <Textarea name="Message" rows="6" placeholder="Message"></Textarea>
+                    <button type="submit" class="btn btn2">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © 2025. made by yassine cheikh</p>
+    </div>
+ </div>
+<SCRIPt>
+    var tablien = document.getElementsByClassName("lien");
+    var tabcontenus = document.getElementsByClassName("tab-contenus");
+    function opentab(tabname){
+        for(tabli  of tablien){
+            tabli.classList.remove("actif");
+        }
+        for(tabcont  of tabcontenus){
+            tabcont.classList.remove("active");
+        }
+        event.currentTarget.classList.add("actif");
+        document.getElementById(tabname).classList.add('active');
+    }
+
+
+    var compbuts = document.getElementsByClassName("but");
+    var tabdetails = document.getElementsByClassName("tab-detail");
+    function ouvrir(tabnom){
+        for(compbut  of compbuts){
+            compbut.classList.remove("activé");
+        }
+        for(tabdetail  of tabdetails){
+            tabdetail.classList.remove("activated");
+        }
+        event.currentTarget.classList.add("activé");
+        document.getElementById(tabnom).classList.add('activated');
+    }
+</SCRIPt>
+</body>
+</html>
